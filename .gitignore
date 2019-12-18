@@ -1,0 +1,11 @@
+*.pyc
+*.sw?
+
+# C extension
+*.so
+cmgl/cmgl.c
+
+# build
+build/
+.eggs/
+*.egg-info/
