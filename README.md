@@ -8,6 +8,14 @@ context managers.
 
 ## Setup
 
+### Dependencies
+
+You'll need those packages:
+
+* `OpenGL`
+* `numpy`.
+
+
 ### Native modules
 
 Build the extension:
