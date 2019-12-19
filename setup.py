@@ -178,5 +178,5 @@ setup(
         'numpy >= 1.13',
     ],
     test_suite="tests",
-    tests_require=["pytest"],
+    tests_require=['PyOpenGL', 'pytest'],
 )
