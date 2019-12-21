@@ -9,7 +9,8 @@ python:
 
 before_install:
     - sudo apt-get -qq update
-    - sudo apt-get install -y freeglut3
+    - sudo apt-get install -y
+        mesa-utils
 
 install:
     - python -m pip install cython
