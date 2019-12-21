@@ -12,7 +12,7 @@ before_install:
     - sudo apt-get install -y
         freeglut3
         mesa-utils
-        libgl1-mesa-swx11
+        libgl1-mesa-glx
 
 install:
     - python -m pip install cython
