@@ -7,11 +7,23 @@ python:
     - 3.7
     - 3.8
 
+os:
+    - linux
+    - osx
+
 before_install:
-    - sudo apt-get -qq update
-    - sudo apt-get install -y
-        freeglut3-dev
-        mesa-utils
+    - echo $TRAVIS_OS_NAME
+    - |
+        if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
+          sudo apt-get -qq update;
+          sudo apt-get install -y \
+            freeglut3-dev \
+            mesa-utils;
+        elif [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+          brew update;
+          brew install \
+            glew;
+        fi
 
 install:
     - python -m pip install cython
