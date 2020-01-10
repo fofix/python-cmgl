@@ -126,7 +126,15 @@ except ImportError:
 pkg_config = find_command('pkg-config')
 
 # find dependencies
-gl_info = pc_info('gl')
+try:
+    gl_info = pc_info('gl')
+except SystemExit:
+    gl_info = {
+        'define_macros': [],
+        'include_dirs': [],
+        'libraries': [],
+        'library_dirs': [],
+    }
 numpy_info = {'include_dirs': [numpy.get_include()]}
 
 
