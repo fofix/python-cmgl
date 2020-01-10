@@ -72,7 +72,7 @@ def pc_info(pkg):
 
     # pkg not found
     if not pc_exists(pkg):
-        sys.stdout.write('not found')
+        sys.stdout.write('not found\n')
         sys.stderr.write('Could not find required library "%s".\n' % pkg)
         sys.exit(1)
 
@@ -129,6 +129,9 @@ pkg_config = find_command('pkg-config')
 try:
     gl_info = pc_info('gl')
 except SystemExit:
+    # OSX: work around to include opengl.framwork during compilation
+    os.environ['LDFLAGS'] = '-framework opengl'
+    os.environ['CFLAGS'] = '-framework opengl'
     gl_info = {
         'define_macros': [],
         'include_dirs': [],
