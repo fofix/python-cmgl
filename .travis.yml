@@ -62,8 +62,10 @@ install:
 
     - python -m pip install cython
     - python -m pip install numpy
+    - python -m pip install pytest
 
 script:
     - python setup.py check
     - python setup.py build_ext --inplace --force
-    - python setup.py test
+    #- python setup.py test
+    - pytest .
