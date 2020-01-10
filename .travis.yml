@@ -62,7 +62,7 @@ install:
 
     - python -m pip install cython
     - python -m pip install numpy
-    - python -m pip install pytest
+    - python -m pip install pytest PyOpenGL
 
 script:
     - python setup.py check
