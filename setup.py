@@ -128,14 +128,17 @@ pkg_config = find_command('pkg-config')
 # find dependencies
 try:
     gl_info = pc_info('gl')
+    print("*************")
+    print(gl_info)
+    print("*************")
 except SystemExit:
     # OSX: work around to include opengl.framwork during compilation
-    os.environ['LDFLAGS'] = '-framework opengl'
-    os.environ['CFLAGS'] = '-framework opengl'
+    os.environ['LDFLAGS'] = '-framework OpenGL'
+    os.environ['CFLAGS'] = '-framework OpenGL'
     gl_info = {
         'define_macros': [],
         'include_dirs': [],
-        'libraries': [],
+        'libraries': ['/System/Library/Frameworks', 'GL', 'GLU'],
         'library_dirs': [],
     }
 numpy_info = {'include_dirs': [numpy.get_include()]}
