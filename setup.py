@@ -138,8 +138,8 @@ except SystemExit:
     gl_info = {
         'define_macros': [],
         'include_dirs': [],
-        'libraries': ['/System/Library/Frameworks', 'GLU'],
-        'library_dirs': [],
+        'libraries': [],
+        'library_dirs': ['/System/Library/Frameworks'],
     }
 numpy_info = {'include_dirs': [numpy.get_include()]}
 
