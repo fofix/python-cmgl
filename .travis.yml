@@ -69,4 +69,4 @@ script:
     - python setup.py check
     - python setup.py build_ext --inplace --force
     #- python setup.py test
-    - python -m pytest
+    - python -m pytest -v
