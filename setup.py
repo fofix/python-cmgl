@@ -133,12 +133,12 @@ try:
     print("*************")
 except SystemExit:
     # OSX: work around to include opengl.framwork during compilation
-    os.environ['LDFLAGS'] = '-framework OpenGL'
-    os.environ['CFLAGS'] = '-framework OpenGL'
+    os.environ['LDFLAGS'] = '-framework OpenGL -framework GLUT'
+    os.environ['CFLAGS'] = '-framework OpenGL -framework GLUT'
     gl_info = {
         'define_macros': [],
         'include_dirs': [],
-        'libraries': ['/System/Library/Frameworks', 'GL', 'GLU'],
+        'libraries': ['/System/Library/Frameworks', 'GLU'],
         'library_dirs': [],
     }
 numpy_info = {'include_dirs': [numpy.get_include()]}
