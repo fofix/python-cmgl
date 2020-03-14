@@ -36,6 +36,7 @@ before_install:
           brew install ffmpeg;
           brew install sdl --universal;
           brew install sdl_image;
+          brew install freeglut glew;
             #freeglut \
             #glew;
         fi

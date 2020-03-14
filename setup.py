@@ -133,8 +133,8 @@ try:
     print("*************")
 except SystemExit:
     # OSX: work around to include opengl.framework during compilation
-    os.environ['LDFLAGS'] = '-framework opengl'
-    os.environ['CFLAGS'] = '-framework opengl'
+    os.environ['LDFLAGS'] = '-framework opengl -framework Cocoa'
+    os.environ['CFLAGS'] = '-framework opengl -framework Cocoa'
     gl_info = {
         'define_macros': [],
         'include_dirs': [],
