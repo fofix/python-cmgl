@@ -115,12 +115,13 @@ def combine_info(*args):
     return info
 
 
+# Readme
+readme_filepath = os.path.join(os.path.dirname(__file__), "README.md")
 try:
     import pypandoc
-    long_description = pypandoc.convert('README.md', 'rst')
+    long_description = pypandoc.convert(readme_filepath, 'rst')
 except ImportError:
-    long_description = open('README.md').read()
-
+    long_description = open(readme_filepath, 'rb').read()
 
 # find pkg-config so we can find the libraries we need.
 pkg_config = find_command('pkg-config')
