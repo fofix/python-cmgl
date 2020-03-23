@@ -7,5 +7,6 @@ cmgl/cmgl.c
 
 # build
 build/
+dist/
 .eggs/
 *.egg-info/
