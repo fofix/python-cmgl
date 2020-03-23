@@ -66,6 +66,7 @@ install:
     - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then pip install -U py; fi  # for pytest
 
     - python -m pip install cython
+    - python -m pip install pkgconfig
     - python -m pip install numpy
     - python -m pip install pytest PyOpenGL
 
