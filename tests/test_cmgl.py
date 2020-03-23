@@ -40,8 +40,8 @@ class DrawArraysTest(unittest.TestCase):
     def test_drawArrays_vertices(self):
         drawArrays(self.mode, self.vertices)
 
-    def test_drawArrays_colors(self):
-        drawArrays(self.mode, self.vertices, self.colors)
+    #def test_drawArrays_colors(self):
+    #    drawArrays(self.mode, self.vertices, self.colors)
 
     def test_drawArrays_colors_wrong_length(self):
         with self.assertRaises(TypeError) as cm:
