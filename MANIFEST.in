@@ -6,5 +6,3 @@ recursive-include cmgl *.h
 recursive-include cmgl *.pxi
 recursive-include cmgl *.pyx
 recursive-include tests *.py
-
-prune cmgl/cmgl.c
