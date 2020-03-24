@@ -71,7 +71,7 @@ try:
     import pypandoc
     long_description = pypandoc.convert(readme_filepath, 'rst')
 except ImportError:
-    long_description = open(readme_filepath, 'rb').read()
+    long_description = open(readme_filepath).read()
 
 
 # find dependencies
