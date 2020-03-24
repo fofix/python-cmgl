@@ -52,15 +52,15 @@ class DrawArraysTest(unittest.TestCase):
     #    the_exception = cm.exception
     #    self.assertEqual(the_exception.args[0], "colors and vertices must be the same length")
 
-    def test_drawArrays_texcoords(self):
-        drawArrays(self.mode, self.vertices, None, self.texcoords)
+    #def test_drawArrays_texcoords(self):
+    #    drawArrays(self.mode, self.vertices, None, self.texcoords)
 
-    def test_drawArrays_texcoords_wrong_length(self):
-        with self.assertRaises(TypeError) as cm:
-            drawArrays(self.mode, self.vertices, None, self.texcoords[:3])
+    #def test_drawArrays_texcoords_wrong_length(self):
+    #    with self.assertRaises(TypeError) as cm:
+    #        drawArrays(self.mode, self.vertices, None, self.texcoords[:3])
 
-        the_exception = cm.exception
-        self.assertEqual(the_exception.args[0], "texcoords and vertices must be the same length")
+    #    the_exception = cm.exception
+    #    self.assertEqual(the_exception.args[0], "texcoords and vertices must be the same length")
 
     # osx: Segmentation fault
     #def test_drawArrays_normals(self):
