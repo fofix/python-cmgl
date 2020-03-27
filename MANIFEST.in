@@ -2,7 +2,7 @@ include LICENSE
 include MANIFEST.in
 include README.md
 
-recursive-include cmgl *.h
-recursive-include cmgl *.pxi
-recursive-include cmgl *.pyx
+recursive-include src/cmgl *.h
+recursive-include src/cmgl *.pxi
+recursive-include src/cmgl *.pyx
 recursive-include tests *.py

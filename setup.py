@@ -4,6 +4,7 @@
 # from distutils.core import setup
 # from distutils.extension import Extension
 # from distutils.sysconfig import get_python_lib
+from setuptools import find_packages
 from setuptools import setup
 from setuptools import Extension
 import numpy
@@ -95,7 +96,7 @@ numpy_info = {'include_dirs': [numpy.get_include()]}
 
 # sources
 ext_sources = [
-    'cmgl/cmgl.pyx'
+    'src/cmgl/cmgl.pyx',
 ]
 
 # extension
@@ -119,8 +120,8 @@ setup(
     author_email='fofix@perdu.fr',
     license='GPLv2+',
     url='https://github.com/fofix/python-cmgl',
-    packages=['cmgl'],
-    package_data={'cmgl': ['*.dll']},
+    packages=find_packages(where='src'),
+    package_dir={'': 'src'},
     zip_safe=False,
     classifiers=[
         'Intended Audience :: Developers',
